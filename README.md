@@ -34,6 +34,14 @@ Construire un portfolio junior orienté offensive security, démontrant la capac
 
 Un write-up est rangé en priorité dans le dossier de sa plateforme. Les dossiers par thème servent aux laboratoires indépendants d'une plateforme ou aux futures synthèses thématiques.
 
+## Index des write-ups
+
+| # | Plateforme | Lab | Catégorie | Difficulté | Write-up |
+| --- | --- | --- | --- | --- | --- |
+| 001 | PortSwigger Web Security Academy | SQL injection in WHERE clause allowing retrieval of hidden data | SQL injection | Apprentice | [Lire le write-up](writeups/other-platforms/portswigger/sql-injection-where-clause-hidden-data/) |
+
+Cet index est mis à jour à chaque nouvelle publication.
+
 ## Format des write-ups
 
 Chaque lab suit le [template réutilisable](templates/writeup-template.md) et contient :
