@@ -20,10 +20,16 @@ Afficher les produits masqués en contournant le filtre de catégorie.
 
 Les produits d'autres catégories sont affichés et le lab est validé.
 
-![Page initiale](01-storefront.png)
+![Page initiale](images/01-storefront.png)
 
-![Catégorie filtrée](02-filtered-category.png)
+La page d'accueil affiche les produits et les catégories disponibles.
 
-![Lab résolu](03-sql-injection-success.png)
+![Catégorie filtrée](images/02-filtered-category.png)
+
+Après la sélection de **Corporate gifts**, seuls les produits de cette catégorie sont affichés.
+
+![Lab résolu](images/03-sql-injection-success.png)
+
+La charge utile contourne le filtre : les produits d'autres catégories apparaissent et le lab est résolu.
 
 > Lab PortSwigger réalisé dans un environnement autorisé.
