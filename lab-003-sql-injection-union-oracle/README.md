@@ -1,21 +1,16 @@
-# Lab 003 — SQL injection UNION (Oracle)
+# Lab 003 — SQL injection Oracle database version
 
 **Plateforme :** PortSwigger Web Security Academy
 
 ## Objectif
 
-Récupérer la version de la base de données Oracle avec une injection SQL `UNION`.
+Afficher le type et la version de la base Oracle avec une injection SQL `UNION`.
 
 ## Étapes
 
-1. Intercepter la requête qui utilise le paramètre `category`.
-2. Vérifier que la requête retourne deux colonnes texte :
-
-```text
-' UNION SELECT 'abc','def' FROM dual--
-```
-
-3. Afficher la version Oracle :
+1. Ouvrir une catégorie de produits.
+2. Tester le paramètre `category`.
+3. Utiliser :
 
 ```text
 ' UNION SELECT BANNER,NULL FROM v$version--
@@ -23,10 +18,18 @@ Récupérer la version de la base de données Oracle avec une injection SQL `UNI
 
 ## Résultat
 
-La valeur `BANNER` de `v$version` est affichée dans la réponse.
+La réponse affiche les valeurs de version Oracle et le lab est validé.
 
-![Étapes et charges utiles](images/01-union-payloads.png)
+![Description du lab](images/01-lab-description.png)
 
-Cette capture montre la validation des deux colonnes, puis la charge utile utilisée pour récupérer la version de la base Oracle.
+Cette page indique que l'injection SQL se trouve dans le filtre de catégorie et que l'objectif est d'afficher la version de la base.
+
+![Filtre de catégorie](images/02-category-filter.png)
+
+La catégorie **Lifestyle** est utilisée dans le paramètre `category`, qui devient le point d'entrée de l'injection.
+
+![Version Oracle affichée](images/03-database-version-success.png)
+
+La charge utile affiche les valeurs renvoyées par `v$version`, dont la version Oracle, puis le lab est résolu.
 
 > Lab PortSwigger réalisé dans un environnement autorisé.
